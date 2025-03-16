@@ -1,0 +1,38 @@
+
+@mixin Layout($colNum:12,$screenName:'',$breakPoint:0px)
+{
+    @if($screenName=='')
+    {
+        @for $i from 1 through $colNum 
+        {
+            .col-#{$i}
+            {
+                width : $i / 12 *100% ;
+            }
+        }
+        
+    }
+
+    @else 
+    {
+        @media screen and (min-width :$breakPoint )
+        {
+            @for $i from 1 through $colNum 
+            {
+                .col-#{$screenName}-#{$i}
+                {
+                    width : $i / 12 *100% ;
+                }
+            }
+        }
+       
+        
+    }
+}
+
+@include Layout();
+@include Layout(12,"sm",576px);
+@include Layout(12,"md",768px);
+@include Layout(12,"lg",992px);
+@include Layout(12,"xl",1200px);
+@include Layout(12,"xxl",1400px);

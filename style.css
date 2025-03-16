@@ -1,0 +1,19 @@
+
+body{
+    background-image: url(./images/low-poly-grid-haikei.svg);
+    
+    background-size: cover;
+    background-repeat: none;
+}
+
+.container
+{
+    background-image: linear-gradient(to right, #B7B1F2,#FDB7EA);
+    
+}
+
+.btn
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
